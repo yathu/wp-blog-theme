@@ -22,6 +22,13 @@
 
                 <div id="sidebar-primary" class="sidebar">
                     <?php
+                    if (function_exists('get_search_form')) {
+                        get_search_form();
+
+                    }
+                    ?>
+
+                    <?php
                     if (function_exists('wpp_get_mostpopular')) {
                         wpp_get_mostpopular(array(
                             'header' => 'Popular Posts',
