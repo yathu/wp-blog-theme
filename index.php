@@ -21,6 +21,29 @@
             <div class="bg-white rounded-2xl p-6">
 
                 <div id="sidebar-primary" class="sidebar">
+                    <?php
+                    if (function_exists('wpp_get_mostpopular')) {
+                        wpp_get_mostpopular(array(
+                            'header' => 'Popular Posts',
+                            'header_start' => '<h3 class="mb-5 font-bold text-2xl">',
+                            'header_end' => '</h3>',
+                            'limit' => 10,
+                            'range' => 'last7days',
+                            'order_by' => 'views',
+                            'post_type' => 'post',
+                            'excerpt_length' => 75,
+                            'thumbnail_width' => 80,
+                            'thumbnail_height' => 80,
+                            'post_html' => '<li class="{current_class} flex flex-row">
+<img src="{thumb_url}" alt="" class="wpp-thumbnail wpp_featured wpp_cached_thumb rounded w-20 h-20" />
+<div class="wpp-item-data flex-1 font-medium">
+<h3 class="mb-1">{title} </h3>
+<p class="wpp-excerpt line-clamp-1 font-normal">{excerpt}</p>
+</div></li>',
+                        ));
+                    }
+                    ?>
+
                     <?php dynamic_sidebar('RightSidebar'); ?>
                 </div>
             </div>
