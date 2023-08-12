@@ -17,10 +17,10 @@
 
     <?php do_action('tailpress_header'); ?>
 
-    <header>
+    <header class="bg-white shadow">
 
-        <div class="mx-auto container">
-            <div class="lg:flex lg:justify-between lg:items-center border-b py-6">
+        <div class="mx-auto container max-w-screen-xl">
+            <div class="lg:flex lg:justify-between lg:items-center py-6">
                 <div class="flex justify-between items-center">
                     <div>
                         <?php if (has_custom_logo()) { ?>
@@ -60,13 +60,33 @@
                         'menu_class' => 'lg:flex lg:-mx-4',
                         'theme_location' => 'primary',
                         'li_class' => 'lg:mx-4',
+                        'li_class_0' => 'lg:relative group uppercase font-semibold text-sm',
+                        'li_class_1' => 'lg:py-1 text-sm font-medium',
+                        'submenu_class' => 'hidden group-hover:block  lg:absolute lg:left-1/2 lg:rounded lg:w-48 lg:max-w-3xl lg:bg-white shadow lg:transform lg:-translate-x-1/2 lg:shadow-behind px-6 pt-2 lg:leading-loose',
                         'fallback_cb' => false,
+
                     )
                 );
                 ?>
             </div>
         </div>
     </header>
+
+    <!--    <div class="container">-->
+    <!--        --><?php
+    //        wp_nav_menu(
+    //            array(
+    //                'container_id' => 'primary-menu',
+    //                'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
+    //                'menu_class' => 'lg:flex lg:-mx-4',
+    //                'theme_location' => 'primary',
+    //                'li_class_0' => 'lg:mx-4 lg:relative group',
+    //                'li_class_1' => 'hover:italic',
+    //                'submenu_class' => 'hidden group-hover:block  lg:absolute lg:left-1/2 lg:rounded lg:w-48 lg:max-w-3xl lg:bg-white lg:ring-1 lg:transform lg:-translate-x-1/2 lg:shadow-behind px-6 pt-2 lg:leading-loose',
+    //                'fallback_cb' => false,));
+    //
+    //        ?>
+    <!--    </div>-->
 
     <div id="content" class="site-content flex-grow">
 

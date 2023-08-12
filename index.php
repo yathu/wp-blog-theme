@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-    <div class="container max-w-screen-xl mx-auto my-8 flex">
+    <div class="container max-w-screen-xl mx-auto my-5 flex flex-col lg:flex-row px-4 sm:px-2 md:max-w-3xl lg:max-w-screen-xl">
 
         <!-- This example requires Tailwind CSS v2.0+ -->
-        <div class="w-2/3 px-4">
+        <div class="w-full lg:w-2/3 px-0 lg:px-3 xl:px-6 flex flex-wrap">
             <?php if (have_posts()) : ?>
                 <?php
                 while (have_posts()) :
@@ -17,11 +17,12 @@
             <?php endif; ?>
         </div>
 
-        <div class="w-1/3 px-4">
+        <div class="w-full lg:w-1/3 sm:px-3 lg:px-3 xl:px-0 ">
             <div class="bg-white rounded-2xl p-6">
-                <h3>
-                    Featured posts
-                </h3>
+
+                <div id="sidebar-primary" class="sidebar">
+                    <?php dynamic_sidebar('RightSidebar'); ?>
+                </div>
             </div>
         </div>
 

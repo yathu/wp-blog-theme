@@ -107,3 +107,17 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
+
+
+function register_leaderboard_sidebar() {
+
+    register_sidebar( array(
+        'name' => __( 'RightSidebar', 'textdomain' ),
+        'id'            => 'sidebar-1',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'register_leaderboard_sidebar');
