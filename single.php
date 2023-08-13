@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="container my-8 mx-auto">
+	<div class="container my-10 mx-auto max-w-screen-xl md:max-w-3xl lg:max-w-screen-xl">
 
 	<?php if ( have_posts() ) : ?>
 

@@ -20,6 +20,9 @@ module.exports = {
         },
         extend: {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
+            fontFamily: {
+                'poppins': ['Poppins', 'sans-serif']
+            },
             // fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme))
         },
         screens: {
@@ -32,6 +35,7 @@ module.exports = {
         }
     },
     plugins: [
-        tailpress.tailwind
+        tailpress.tailwind,
+        require('@tailwindcss/typography'),
     ]
 };

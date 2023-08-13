@@ -1,7 +1,7 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("bg-white py-20 prose md:prose-lg max-w-none"); ?>>
 
 	<header class="entry-header mb-4">
-		<?php the_title( sprintf( '<h1 class="entry-title text-2xl lg:text-5xl font-extrabold leading-tight mb-1"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h1 class="font-poppins entry-title capitalize text-2xl lg:text-4xl font-bold leading-tight mb-0"><a href="%s" class="no-underline" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		<time datetime="<?php echo get_the_date( 'c' ); ?>" itemprop="datePublished" class="text-sm text-gray-700"><?php echo get_the_date(); ?></time>
 	</header>
 

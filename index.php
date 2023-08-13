@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div class="container max-w-screen-xl mx-auto my-5 flex flex-col lg:flex-row px-4 sm:px-2 md:max-w-3xl lg:max-w-screen-xl">
+    <div class="container mx-auto my-5 flex flex-col lg:flex-row px-4 sm:px-2 max-w-screen-xl md:max-w-3xl lg:max-w-screen-xl">
 
         <!-- This example requires Tailwind CSS v2.0+ -->
         <div class="w-full lg:w-2/3 px-0 lg:px-3 xl:px-6 flex flex-wrap">
