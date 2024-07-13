@@ -37,5 +37,6 @@ module.exports = {
     plugins: [
         tailpress.tailwind,
         require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
     ]
 };
