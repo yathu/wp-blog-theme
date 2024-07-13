@@ -9,10 +9,10 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area my-8">
+<div id="comments" class="comments-area my-8 p-4 bg-white rounded shadow">
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
+		<h2 class="comments-title text-2xl font-bold mb-4">
 			<?php
 				printf(
 					_nx( 'One comment', '%1$s comments', get_comments_number(), 'comments title', 'tailpress' ),
@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<ol class="comment-list">
+		<ol class="comment-list list-decimal pl-5 mb-4">
 			<?php
 				wp_list_comments(
 					array(
@@ -38,7 +38,7 @@ if ( post_password_required() ) {
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
-		<nav class="comment-navigation" id="comment-nav-above">
+		<nav class="comment-navigation flex justify-between mb-4" id="comment-nav-above">
 
 			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'tailpress' ); ?></h1>
 
@@ -59,14 +59,14 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'tailpress' ); ?></p>
+		<p class="no-comments text-gray-600"><?php esc_html_e( 'Comments are closed.', 'tailpress' ); ?></p>
 	<?php endif; ?>
 
 	<?php
 	comment_form(
 		array(
-			'class_submit'  => 'bg-primary text-white cursor-pointer rounded font-bold py-2 px-4',
-			'comment_field' => '<textarea id="comment" name="comment" class="bg-gray-200 w-full py-2 px-3" aria-required="true"></textarea>',
+			'class_submit'  => 'bg-blue-500 text-white cursor-pointer rounded font-bold py-2 px-4 mt-2',
+			'comment_field' => '<textarea id="comment" name="comment" class="bg-gray-200 w-full py-2 px-3 rounded border border-gray-300 mb-4" aria-required="true"></textarea>',
 		)
 	);
 	?>
