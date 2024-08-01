@@ -47,6 +47,29 @@ function tailpress_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'tailpress_enqueue_scripts' );
 
+function add_prism() {
+
+        // Register prism.css file
+        wp_register_style(
+            'prismCSS', // handle name for the style
+            tailpress_asset( 'css/prism.css' ) // location of the prism.css file
+        );
+
+        // Register prism.js file
+        wp_register_script(
+            'prismJS', // handle name for the script
+            tailpress_asset( 'js/prism.js' ) // location of the prism.js file
+        );
+
+        // Enqueue the registered style and script files
+        wp_enqueue_style('prismCSS');
+        wp_enqueue_script('prismJS');
+
+
+}
+add_action('wp_enqueue_scripts', 'add_prism');
+
+
 /**
  * Get asset path.
  *

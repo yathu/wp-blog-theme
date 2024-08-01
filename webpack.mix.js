@@ -13,7 +13,9 @@ mix.webpackConfig({
 });
 
 mix.js('resources/js/app.js', 'js');
+mix.js('resources/js/prism.js', 'js');
 
+mix.postCss("resources/css/prism.css", "css");
 mix.postCss("resources/css/app.css", "css");
 
 mix.postCss("resources/css/editor-style.css", "css");

@@ -18,6 +18,6 @@
 </div>
 
 <?php wp_footer(); ?>
-
+<script>hljs.highlightAll();</script>
 </body>
 </html>
